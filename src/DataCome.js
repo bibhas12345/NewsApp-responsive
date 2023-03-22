@@ -23,9 +23,9 @@ export default function DataCome({ cat }) {
     setSearchQuery(e.target.value);
   };
 
-  const filteredData = data.length > 0 && data.filter((item) =>
-  item.title.toLowerCase().includes(searchQuery.toLowerCase())
-);
+  const filteredData = data.filter((item) =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div>
