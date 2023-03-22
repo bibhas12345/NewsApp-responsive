@@ -16,7 +16,7 @@ export default function Navbar() {
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <a href="#" className="flex items-center">
                         {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-6 mr-3 md:h-10" alt="Flowbite Logo" /> */}
-                        <h2 className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"><span className='text-red-600 text-3xl'>N</span>ews<span className='text-2xl text-red-600'>24</span></h2>
+                        <h2 className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"><span className='text-red-600 text-3xl'>N</span>ews<span className='text-3xl text-red-600'>24</span></h2>
                     </a>
                     <button data-collapse-toggle="navbar-solid-bg" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-solid-bg" aria-expanded="false" onClick={()=>handleShow()}>
                         {!show && <HiOutlineMenu className='text-rose-400' size='1.3rem' />}
