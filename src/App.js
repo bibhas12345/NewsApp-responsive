@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./Navbar";
+import {HashRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./Home"
+import DataCome from "./DataCome";
+import Footer from "./Footer";
+// import Temp from "./Temp";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="overflow-hidden w-full">
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route exact path="/" element={<Home />}/>
+          <Route  path="/general" element={<DataCome cat="general" />}/>
+          <Route  path="/business" element={<DataCome cat="business" />}/>
+          <Route  path="/entertainment" element={<DataCome cat="entertainment" />}/>
+          <Route  path="/health" element={<DataCome cat="health" />}/>
+          <Route  path="/science" element={<DataCome cat="science" />}/>
+          <Route  path="/sports" element={<DataCome cat="sports" />}/>
+          <Route  path="/technology" element={<DataCome cat="technology" />}/>
+          
+        </Routes>
+        <Footer/>
+      </Router>
+     {/* <Temp/> */}
+     
+    
+     
+      
     </div>
   );
 }
